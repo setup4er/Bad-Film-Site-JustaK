@@ -1,0 +1,108 @@
+#error{
+    font-size: 15px;
+    font-family:'Courier New', Courier, monospace;
+    color: red;
+}
+
+.wrapper{   
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#text{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* button */
+#log_button{
+    margin-top: 40px;
+    margin-left: 10px;
+    display: block;
+    width: auto;
+    height: auto;
+    line-height: 40px;
+    font-size: 18px;
+    width: 90%;
+}
+
+button{
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: sans-serif;
+    color: #333;
+    border: 2px solid #333;
+    text-decoration: none;
+    position: relative;
+    transition: all .35s;
+
+  }
+  
+  button span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    transition: all .35s;
+  }
+  
+  button:hover{
+    color: #fff;
+  }
+  
+  button:hover:after{
+    width: 100%;
+  }
+  .sub_buttons{
+    margin-top: 10px;
+  }
+  .sub_buttons span{
+    line-height: 30px;
+    font-size: 12px;
+    
+  }
+  #background-login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: inherit;
+    height: 60%;
+    width: 50%;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+  }
+  
+  @media (max-width: 1024px) {
+    .wrapper{
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+    #background-login {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 80%;
+      width: 80%;
+    }
+  }
+  

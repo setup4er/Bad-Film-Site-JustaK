@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LogIn</title>
+        <link href="../../styles/mainstyle.css" rel="stylesheet">
+        <link href="../../styles/login_style.css" rel="stylesheet">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <header>
+            <div class="container">
+              <a href='../../index.html'><img id='main_page_button' src="../../image/logo.png"></a>
+              <nav>
+                <div class="nav-toggle">
+                  <span class="nav-toggle-icon"></span>
+                </div>
+                <ul class="nav-menu">
+                  <li><a href="../movies.html">Movies</a></li>
+                  <li><a href="../favorite.html">Favorite<img id="user-icon" src="../../image/star-icon.png"></img></a></li>
+                  <li><a href="../contact.html">Contact</a></li>
+                  <li><a href="login.html" src="../../image/user-icon.png"></a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+    </head>
+    <body>
+      <img id="background-login" src="../../image/background-login.png">
+        <wrapper class="wrapper">
+            <form>
+                <text id="text">Login</text><br>
+                <input id="login" type="text" placeholder="Enter login">
+            <br>
+            <br>
+                <text id="text">Password</text><br>
+                <input id="passwd_f" type="password" placeholder="Enter password">
+            <br>
+            </form>
+            <button id="log_button" href="#" onclick="buttonClickedOnLogin(document.getElementsByTagName('input'))"><span>Log in</span></button>
+            <div class="sub_buttons">
+                <button onclick="window.location.href = 'register.html'"><span>REGISTER</span></button>
+            </div>
+        </wrapper>
+        <script src="../../script/account_scripts.js"></script>
+    </body>
+</html>

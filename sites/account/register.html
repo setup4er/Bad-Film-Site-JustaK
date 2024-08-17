@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="../../styles/mainstyle.css" rel="stylesheet">
+    <link href="../../styles/reg_style.css" rel="stylesheet">
+    <header>
+        <div class="container">
+          <a href='../../index.html'><img id='main_page_button' src="../../image/logo.png"></a>
+          <nav>
+            <div class="nav-toggle">
+              <span class="nav-toggle-icon"></span>
+            </div>
+            <ul class="nav-menu">
+              <li><a href="../movies.html">Movies</a></li>
+              <li><a href="../favorite.html">Favorite<img id="user-icon" src="../../image/star-icon.png"></img></a></li>
+              <li><a href="../contact.html">Contact</a></li>
+              <li><a href="login.html">Account<img id="user-icon" src="../../image/user-icon.png"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+</head>
+<body>
+  <img id="background-reg" src="../../image/background-login.png">
+    <wrapper class="wrapper">
+        <form>
+            <text id="text">Login</text><br>
+            <input id="login" type="text" placeholder="Enter login">
+        <br>
+        <br>
+            <text id="text">Password</text><br>
+            <input id="passwd_f" type="password" placeholder="Enter password">
+        <br>
+        <br>
+            <input id="passwd_s" type="password" placeholder="Repeat password">
+            <br>
+        </form>
+        <button onclick="buttonClickedOnRegister(document.getElementsByTagName('input'))"><span>Register</span></button>
+        <br>
+        <script src="../../script/account_scripts.js"></script>
+    </wrapper>
+</body>
+</html> 

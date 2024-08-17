@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Main page</title>
+        <link href="styles/mainstyle.css" rel="stylesheet">
+        <style>
+          header {
+          background: linear-gradient(black, rgba(0, 0, 0, 0));
+          }
+          #main_page_button{
+          display: none;
+          }
+          #mainVideo{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            filter: blur(100px);
+          }
+          #futazh{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.5;
+          }
+          #main_logo{
+            position: fixed;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            opacity: 1;
+            height: 300px;
+            width: 300px;
+          }
+          .text-logo {
+            margin-top: 5%;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 110px;
+            font-weight: bold;
+            color: hsl(0, 0%, 100%);
+            position: fixed;
+            top: 40%;
+            left: 48%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            letter-spacing: 3px;
+          }
+          #text-under-logo{
+            font-size: 60px;
+            margin-left: 27%;
+            margin-top: -15%;
+          }
+          .text-f{
+            transform: translate(-50%, -50%);
+            position: fixed;
+            top: 90%;
+            left: 50%;
+            font: italic small-caps bold 16px/2 cursive;
+            
+          }
+          @media (max-width: 767px) or (max-height:720px){
+            #main_logo{
+              height: 240px;
+              width: 240px;
+              position: fixed;
+              top: -2%;
+              left: 25%;
+            }
+            .text-logo {
+              font-size: 60px;
+              transform: translate(-50%, -50%);
+              left: 50%;
+              bottom: 30%;
+            }
+            #text-under-logo {
+              font-size: 30px;
+              margin-left: 27%;
+              margin-top: -15%;
+            }
+            .text-f {
+              hyphenate-limit-chars: 6 3 2;
+              transform: translate(-50%, -50%);
+              left: 50%;
+              font-size: 8px;
+            }
+          }
+        </style>  
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <video id="mainVideo" loop autoplay muted>
+        <source src="image/mainpage.mp4" type="video/mp4">
+      </video>
+      <video id="futazh" loop autoplay muted>
+        <source src="image/sneg.mp4" type="video/mp4">
+      </video>
+      <header>
+        <div class="container">
+          <a href='../main_page.html'><img id='main_page_button' src="../image/logo.png"></a>
+          <nav>
+            <div class="nav-toggle">
+              <span class="nav-toggle-icon"></span>
+            </div>
+            <ul class="nav-menu">
+              <li><a href="sites/movies.html">Movies</a></li>
+              <li><a href="sites/favorite.html">Favorite<img id="user-icon" src="image/star-icon.png"></img></a></li>
+              <li><a href="sites/contact.html">Contact</a></li>
+              <li><a href="sites/account/login.html">Account<img id="user-icon" src="image/user-icon.png"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <wrapper class="main_wrapper">
+
+        <div class ="text-logo">
+          <img id="main_logo" src="image/logo.png"></img>
+          <p>JustaK</p>
+          <h2 id = "text-under-logo">Films FOREVERYONE :^</h2>
+        </div>
+      </wrapper>
+      <div class ="text-f">
+        <h1>&#40;ЗДЕСЬ_МОГЛА_БЫ_БЫТЬ_ВАША_РЕКЛАМА&#41;</h1>
+      </div>
+      <script src="script/hideheader.js"></script>
+    </body>
+</html>

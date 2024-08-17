@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JustaK - Movies</title>
+        <link href="../styles/mainstyle.css" rel="stylesheet">
+        <link href="../styles/movies_page.css" rel="stylesheet">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+      <header>
+        <div class="container">
+          <a href='../index.html'><img id='main_page_button' src="../image/logo.png"></a>
+          <nav>
+            <div class="nav-toggle">
+              <span class="nav-toggle-icon"></span>
+            </div>
+            <ul class="nav-menu">
+              <li><a href="movies.html">Movies</a></li>
+              <li><a href="favorite.html">Favorite<img id="user-icon" src="../image/star-icon.png"></img></a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="account/login.html">Account<img id="user-icon" src="../image/user-icon.png"></a></li>
+            </ul>
+          </nav>
+        </div>
+        <img id ="pagination_image" src="../image/pagination_image.png">
+      </header>
+
+          <div class="wrapper">
+            <img id="backimage" src="../image/backgroung-movies.jpg">
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <img class="modal-poster" src="" alt="">
+              <div class="modal-info">
+                <h2 class="modal-title"></h2>
+                <p class="modal-rating"></p>
+                <p class="modal-release-date"></p>
+                <p class="modal-overview"></p>
+              </div>
+            </div>
+          </div>
+          <script src="../script/db.js"></script>
+          <script src="../script/backblur(movies).js"></script>
+          <script src="../script/hideheader.js"></script>
+         
+    </body>
+</html>
