@@ -1,9 +1,11 @@
+// const objects
 const backImage = document.getElementById('backimage');
 const movieContainers = document.getElementsByClassName('movie-container');
 const headerLinks = document.querySelectorAll('header nav a');
 const paginationImage = document.getElementById("pagination_image")
 const pagination = document.getElementsByClassName('pagination')
 backImage.style.backgroundImage = 'url(../image/backgroung-movies.jpg)';
+// блюр если наведено на headerLinks - кнопки хедера
 headerLinks.forEach(link => {
   link.addEventListener('mouseover', () => {
     backImage.style.filter = 'blur(5px)';

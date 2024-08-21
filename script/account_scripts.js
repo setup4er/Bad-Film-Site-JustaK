@@ -4,6 +4,7 @@ let data = {}
 
 function buttonClickedOnLogin(element)
 {
+    //Input data
     data = {
         login: element[0].value,
         password: element[1].value
@@ -37,7 +38,7 @@ function buttonClickedOnRegister(element)
     else
     {
         isPasswordIncorrect = false;
-        // Reg. info
+        // Input data
         data={
             login: element[0].value,
             password: element[1].value

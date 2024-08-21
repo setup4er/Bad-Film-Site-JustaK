@@ -11,9 +11,6 @@ async function getResponse()
       throw new Error(`HTTP error ${response.status}`)
     }  
     
-
-  
-
   let content = await response.json();
   console.log(content);
 
@@ -21,8 +18,10 @@ async function getResponse()
   {
     container.remove();
   }
+  // Очистка предыдущих кнопок навигации (фикс-костыль)
   const existingContainers = document.querySelectorAll('.movie-container, .pagination');
   existingContainers.forEach(container => container.remove());
+
   container = document.createElement('div');
   container.className = 'movie-container';
 
@@ -66,7 +65,7 @@ async function getResponse()
   }
 }
 
-  
+  // Всплывающее окно информации о фильме
   function showModal(movie) 
   {
     const modal = document.querySelector('.modal');
@@ -120,7 +119,7 @@ async function getResponse()
     const paginationContainer = document.createElement('div');
     paginationContainer.className = 'pagination';
   
-    // Calculate the range of page numbers to display
+    //Алгоритм кнопок
     let startPage, endPage;
     if (currentPage <= 3) {
       startPage = 1;
@@ -132,8 +131,8 @@ async function getResponse()
       startPage = currentPage - 2;
       endPage = currentPage + 2;
     }
-  
-    // Create the page buttons
+    
+    // Добавление самих кнопок
     for (let i = startPage; i <= endPage; i++) {
       const pageButton = document.createElement('button');
       pageButton.textContent = i;
@@ -147,8 +146,7 @@ async function getResponse()
       });
       paginationContainer.appendChild(pageButton);
     }
-  
-    // Add the first and last page buttons
+    //Начальная + конечная кнопка 
     if (startPage > 1) {
       const firstPageButton = document.createElement('button');
       firstPageButton.textContent = '1';
@@ -181,8 +179,6 @@ async function getResponse()
     
     document.body.appendChild(paginationContainer);
   }
-  
-  
   
   getResponse();
   

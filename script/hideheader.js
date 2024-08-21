@@ -1,6 +1,7 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
+//Кнопка adaptive меню. Опт. для телефонов
 if (navToggle && navMenu) 
 {
   navToggle.addEventListener('click', () => {
