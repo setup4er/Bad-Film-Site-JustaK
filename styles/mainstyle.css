@@ -63,19 +63,15 @@ header {
     height: 50px;
   }
   @media (max-width: 1024px) {
-    nav .nav-menu {
+    .nav-menu {
       display: none;
     }
-
-    nav .nav-toggle {
+    .nav-menu.active{
       display: block;
-      cursor: pointer;
-      padding: 10px;
     }
-    #main_page_button{
-      display: none;
-      }
     nav .nav-toggle-icon {
+      margin-top: 20px;
+      
       display: block;
       width: 30px;
       height: 3px;
@@ -84,7 +80,6 @@ header {
     }
 
     nav.active .nav-menu {
-      display: flex; 
       flex-direction: row-reverse;
       align-items: flex;
       background-color: black;
