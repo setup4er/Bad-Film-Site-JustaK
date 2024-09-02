@@ -1,5 +1,8 @@
 let currentPage = 1;
 let container;
+let chosedMovie;
+
+let favouriteDataArray = [];
 
 async function getResponse() 
 {
@@ -53,6 +56,7 @@ async function getResponse()
         container.appendChild(movieWrapper);
     }
 
+
   });
 
   document.body.appendChild(container);
@@ -76,10 +80,10 @@ async function getResponse()
     const modalOverview = document.querySelector('.modal-overview');
     const backImage = document.getElementById('backimage');
     const movieContainers = document.querySelectorAll('.movie-container');
-
-    console.log(movieContainers)
+    const favouriteButton = document.querySelector('.favourite-btn');
 
     modalPoster.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+
     modalTitle.textContent = movie.title;
     modalRating.textContent = `Rating: ${movie.vote_average}`;
     modalReleaseDate.textContent = `Release Date: ${movie.release_date}`;
@@ -92,8 +96,16 @@ async function getResponse()
       container.style.filter = 'blur(5px)';
     });
   
-    const closeButton = document.querySelector('.close-button');
 
+    favouriteButton.addEventListener('click', ()=>{
+    if(!favouriteDataArray.includes(movie))
+    {
+      favouriteDataArray.push(movie)
+    }
+    console.log(favouriteDataArray);
+    })
+
+    const closeButton = document.querySelector('.close-button');
     closeButton.addEventListener('click', () => {
       modal.style.display = 'none';
       backImage.style.filter = 'blur(0px)';
@@ -101,7 +113,7 @@ async function getResponse()
         container.style.filter = 'blur(0px)';
       });
     });
-  
+  // Blur background
     window.addEventListener('click', (event) => {
       if (event.target == modal) 
         {
@@ -181,4 +193,3 @@ async function getResponse()
   }
   
   getResponse();
-  

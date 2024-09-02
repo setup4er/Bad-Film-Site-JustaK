@@ -63,15 +63,19 @@ header {
     height: 50px;
   }
   @media (max-width: 1024px) {
+    nav{
+      margin-left: 100px;
+    }
     .nav-menu {
       display: none;
+ 
     }
     .nav-menu.active{
       display: block;
+      
     }
     nav .nav-toggle-icon {
       margin-top: 20px;
-      
       display: block;
       width: 30px;
       height: 3px;

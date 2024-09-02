@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>JustaK - Favorite</title>
         <link href="../styles/mainstyle.css" rel="stylesheet">
+        <link href="../styles/movies_page.css" rel="stylesheet">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -26,6 +27,24 @@
           </nav>
         </div>
       </header>
+      <img id="backimage" src="../image/backgroung-movies.jpg">
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <img class="modal-poster" src="" alt="">
+          <div class="modal-info">
+            <h2 class="modal-title"></h2>
+            <p class="modal-rating"></p>
+            <p class="modal-release-date"></p>
+            <p class="modal-overview"></p>
+          </div>
+          <div class="bottom-modal-btn">
+            <span class="favourite-btn">Add-To-Favourite</span>
+          </div>
+        </div>
+      </div>
+      <script src="../script/favourites_db.js"></script>
+      <script src="../script/backblur(movies).js"></script>
       <script src="../script/hideheader.js"></script>
     </body>
 </html>
