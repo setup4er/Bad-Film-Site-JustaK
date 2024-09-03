@@ -1,3 +1,56 @@
+function getLocalStorage() {
+  try {
+    let content = JSON.parse(localStorage.getItem('favouriteData'));
+    if (!content || !content[0]) {
+      console.error('Local storage is clear');
+      printClearPage(); // Вызываем функцию, которая печатает страницу с сообщением о пустом localStorage
+      return;
+    }
+
+    console.log(content);
+
+    const container = document.createElement('div');
+    container.className = 'movie-container';
+
+    content.forEach((movie) => {
+      if (movie.poster_path && movie.backdrop_path) {
+        const movieWrapper = document.createElement('div');
+        movieWrapper.className = 'movie-wrapper';
+        movieWrapper.addEventListener('click', () => showModal(movie));
+
+        const img = document.createElement('img');
+        img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+        img.className = 'movie-poster';
+
+        const movieInfo = document.createElement('div');
+        movieInfo.className = 'movie-info';
+
+        const title = document.createElement('h3');
+        title.textContent = movie.title;
+
+        const overview = document.createElement('p');
+        overview.textContent = movie.overview;
+
+        movieInfo.appendChild(title);
+        movieInfo.appendChild(overview);
+
+        movieWrapper.appendChild(img);
+        movieWrapper.appendChild(movieInfo);
+
+        container.appendChild(movieWrapper);
+      }
+    });
+
+    document.body.appendChild(container);
+
+    createPagination(content.total_pages);
+  } catch (error) {
+    console.error('Error retrieving data from localStorage:', error);
+    printClearPage(); // Вызываем функцию, которая печатает страницу с сообщением об ошибке
+  }
+}
+
+
 function showModal(movie) 
 {
   const modal = document.querySelector('.modal');
@@ -45,3 +98,10 @@ function showModal(movie)
     }
   });
 }
+
+function printClearPage()
+{
+  console.log("printed");
+}
+
+getLocalStorage();

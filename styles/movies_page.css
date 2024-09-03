@@ -128,7 +128,7 @@ nav a:hover .movie-container{
   flex: 1;
 }
 
-  @media (max-width: 767px) {
+  @media (max-width: 900px) {
     .modal{
       left:-4%;
     }

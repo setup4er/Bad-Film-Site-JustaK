@@ -3,7 +3,7 @@ let container;
 let chosedMovie;
 
 let favouriteDataArray = [];
-
+favouriteDataArray = JSON.parse(localStorage.getItem('favouriteData'));
 async function getResponse() 
 {
   try{
@@ -102,7 +102,7 @@ async function getResponse()
     {
       favouriteDataArray.push(movie)
     }
-    console.log(favouriteDataArray);
+    localStorage.setItem('favouriteData', JSON.stringify(favouriteDataArray));
     })
 
     const closeButton = document.querySelector('.close-button');
