@@ -1,2 +1,2 @@
 # JustaK - Unlucky film site.
-U'll say: "Why unlucky?", i told... because.
+U'll answer: "Why unlucky?", i will tell u... because.
